@@ -1,9 +1,10 @@
 {
+  "id": "stinger-transition",
   "name": "stinger-transition",
   "title": "Stinger Scene Transition",
   "description": "Plays a custom transition video for a single player before changing scenes.",
   "version": "1.0.0",
-  "author": "YourName",
+  "author": "Frostipanda",
   "esmodules": ["main.js"],
   "styles": ["styles/transition.css"],
   "templateVersion": 1,
@@ -12,8 +13,8 @@
   "scripts": [],
   "languages": [],
   "packs": [],
-  "url": "",
-  "manifest": "",
-  "download": "",
+  "url": "https://github.com/Frostipanda/foundryvtt-stinger-transition",
+  "manifest": "https://raw.githubusercontent.com/Frostipanda/foundryvtt-stinger-transition/main/module.json",
+  "download": "https://github.com/Frostipanda/foundryvtt-stinger-transition/archive/refs/heads/main.zip",
   "dependencies": []
 }
