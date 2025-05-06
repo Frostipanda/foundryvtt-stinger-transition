@@ -9,9 +9,30 @@
   justify-content: center;
   align-items: center;
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.stinger-overlay.visible {
+  opacity: 1;
 }
 
 .stinger-video {
   max-width: 100%;
   max-height: 100%;
+}
+
+.scene-id-copy {
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: 1px solid #888;
+  padding: 2px 6px;
+  margin-left: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.scene-id-copy:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
