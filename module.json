@@ -1,0 +1,19 @@
+{
+  "name": "stinger-transition",
+  "title": "Stinger Scene Transition",
+  "description": "Plays a custom transition video for a single player before changing scenes.",
+  "version": "1.0.0",
+  "author": "YourName",
+  "esmodules": ["main.js"],
+  "styles": ["styles/transition.css"],
+  "templateVersion": 1,
+  "minimumCoreVersion": "12",
+  "compatibleCoreVersion": "12",
+  "scripts": [],
+  "languages": [],
+  "packs": [],
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "dependencies": []
+}
