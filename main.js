@@ -10,8 +10,10 @@ class StingerTransition extends Application {
       id: "stinger-transition",
       template: "modules/stinger-transition/templates/stinger.html",
       popOut: false,
-      width: "100%",
-      height: "100%",
+      width: 100,
+      height: 100,
+      resizable: false,
+      minimizable: false,
       classes: ["stinger-transition"]
     });
   }
@@ -21,11 +23,30 @@ class StingerTransition extends Application {
   }
 
   activateListeners(html) {
-    setTimeout(() => this.close(), this.duration);
+    const overlay = html[0].querySelector(".stinger-overlay");
+    if (!overlay) return;
+
+    // Inject into visible DOM
+    document.body.appendChild(overlay);
+
+    // Trigger fade-in
+    void overlay.offsetWidth;
+    overlay.classList.add("visible");
+
+    // Start fade-out just before the end
+    setTimeout(() => {
+      overlay.classList.remove("visible");
+    }, this.duration - 500); // Adjust if you change fade duration
+
+    // Clean up and close
+    setTimeout(() => {
+      overlay.remove();
+      this.close();
+    }, this.duration);
   }
 }
 
-// Setup API and UI buttons
+// Setup API
 Hooks.once('init', () => {
   console.log("Stinger Transition | Initialized");
 
@@ -42,7 +63,7 @@ Hooks.once('init', () => {
   };
 });
 
-// Add "Copy Scene ID" button to top bar
+// Add "Copy Scene ID" button to the scene navigation bar
 Hooks.on("renderSceneNavigation", (app, html, data) => {
   const btn = $(`<button class="scene-id-copy" title="Copy Current Scene ID">
     <i class="fas fa-clipboard"></i> ID
