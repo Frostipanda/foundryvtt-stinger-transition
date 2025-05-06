@@ -3,7 +3,7 @@
   "name": "stinger-transition",
   "title": "Stinger Scene Transition",
   "description": "Plays a custom transition video for a single player before changing scenes.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Frostipanda",
   "esmodules": ["main.js"],
   "styles": ["styles/transition.css"],
